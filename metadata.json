@@ -1,0 +1,6 @@
+{
+  "name": "NexusWeb - Visual Knowledge Network & Smart Website Organizer",
+  "description": "Obsidian-inspired interactive visual network and smart organizer for websites and developer tools with force-directed graph view and auto-categorization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

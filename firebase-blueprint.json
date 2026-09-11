@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile, networks, websites, and settings stored securely per authenticated user account.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "websites": {
+          "type": "array",
+          "items": { "type": "object" },
+          "description": "All bookmarked and organized website nodes"
+        },
+        "networks": {
+          "type": "array",
+          "items": { "type": "object" },
+          "description": "Custom networks and clusters"
+        },
+        "settings": {
+          "type": "object",
+          "description": "Graph physics, appearance, and navigation settings"
+        },
+        "history": {
+          "type": "array",
+          "items": { "type": "object" },
+          "description": "Visit history log"
+        },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "entity": "User",
+      "description": "Scoped user document containing all personal networks, websites, graph topology, and settings."
+    }
+  }
+}
